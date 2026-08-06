@@ -35,11 +35,21 @@
 </head>
 <body>
 <div class="loading">Loading Application...</div>
+
+<!-- Give the iframe an ID and remove the hardcoded src -->
 <iframe
-    src="https://script.google.com/macros/s/AKfycbzetu_9O5oPFSg8BUaIyXTm3nKmvR_J25jL6m730oNg2EeDDLSssmtCFPW4n3yzjOQ5gg/exec"
+    id="appFrame"
     allowfullscreen
     sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox allow-downloads"
     onload="document.querySelector('.loading').style.display='none';">
 </iframe>
+
+<script>
+    // Dynamically set the URL with a timestamp to prevent browser caching
+    const baseUrl = "https://script.google.com/macros/s/AKfycbzetu_9O5oPFSg8BUaIyXTm3nKmvR_J25jL6m730oNg2EeDDLSssmtCFPW4n3yzjOQ5gg/exec";
+    const iframe = document.getElementById("appFrame");
+    iframe.src = baseUrl + "?t=" + new Date().getTime();
+</script>
+
 </body>
 </html>
