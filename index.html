@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIP Reference ATP</title>
-
     <style>
         *{
             margin:0;
             padding:0;
             box-sizing:border-box;
         }
-
         html,body{
             width:100%;
             height:100%;
@@ -19,14 +17,12 @@
             background:#f4f6f9;
             font-family:Arial, Helvetica, sans-serif;
         }
-
         iframe{
             width:100%;
             height:100vh;
             border:none;
             display:block;
         }
-
         .loading{
             position:absolute;
             top:50%;
@@ -37,17 +33,13 @@
         }
     </style>
 </head>
-
 <body>
-
 <div class="loading">Loading Application...</div>
-
 <iframe
     src="https://script.google.com/macros/s/AKfycbzetu_9O5oPFSg8BUaIyXTm3nKmvR_J25jL6m730oNg2EeDDLSssmtCFPW4n3yzjOQ5gg/exec"
     allowfullscreen
-    sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+    sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox allow-downloads"
     onload="document.querySelector('.loading').style.display='none';">
 </iframe>
-
 </body>
 </html>
